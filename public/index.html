@@ -6,23 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>I.ART</title>
     <style>
-      @import url("src/styles/index.css");
+      @import url("./src/styles/index.css");
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
-    <nav>
+    <nav id="navigation" data-aos="fade-down">
       <h1 class="title">I.ART</h1>
-      <ul>
+      <ul class="nav-links">
+
         <li><a href="#expo">Exposition</a></li>
         <li><a href="#projet">Projet</a></li>
         <li><a href="#booking">Réserver</a></li>
         <li><a href="#contact">Nous contacter</a></li>
       </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
     </nav>
     <main id="expo">
       <div class="exposition section">
         <div class="explanation">
-          <div class="cartel first-cartel">
+          <div class="cartel first-cartel" data-aos="fade-left">
             <h2>L'<span>art</span> vu par une machine</h2>
             <p>
               Une I.A(I. Art) est reliée à un bras articulé tel que celui de la
@@ -36,7 +43,7 @@
               des œuvres en se basant sur ces expériences.
             </p>
           </div>
-          <div class="cartel second-cartel">
+          <div class="cartel second-cartel" data-aos="fade-left">
             <h2>L' <span>exposition</span> de l'oeuvre</h2>
             <p>
               La machine à dessiner serait exposé à Lafayette Anticipation à
@@ -61,28 +68,43 @@
           class="img"
           src="./src/components/undraw_conceptual_idea_xw7k.svg"
           alt="The idea of the artist"
+          data-aos="fade-right"
         />
       </div>
       <div class="project section" id="projet">
-        <img src="./src/components/undraw_artist_b4rc.svg" alt="Un artiste" class="img">
+        <img
+          src="./src/components/undraw_artist_b4rc.svg"
+          alt="Un artiste"
+          class="img"
+          data-aos="fade-left"
+        />
         <div class="explanation">
-          <div class="cartel first-cartel">
+          <div class="cartel first-cartel" data-aos="fade-right">
             <h2>Le <span>projet</span></h2>
             <p>
-              Si nous avons décidé de créer I.ART, c'est pour représenter la pensée, l'évolution de l'artiste au fur et à mesure de ses créations, pour représenter le nombre d'échecs qui sont des petites victoire dans la grande guerre contre soi-même.La guerre qui nous permet de nous améliorer, car personne n'ai né doué ou avec un talent chacun frabrique sont talent et deviens meilleur avec le temps
+              Si nous avons décidé de créer I.ART, c'est pour représenter la
+              pensée, l'évolution de l'artiste au fur et à mesure de ses
+              créations, pour représenter le nombre d'échecs qui sont des
+              petites victoire dans la grande guerre contre soi-même.La guerre
+              qui nous permet de nous améliorer, car personne n'ai né doué ou
+              avec un talent chacun frabrique sont talent et deviens meilleur
+              avec le temps
             </p>
           </div>
-          <div class="cartel second-cartel">
-            <h2><span></span></h2>
-            <p>
-              
-            </p>
+          <div class="cartel second-cartel" data-aos="fade-right">
+            <h2>La <span>représentation</span> de l'esprit artistique</h2>
+            <p></p>
           </div>
         </div>
       </div>
       <div class="réservation section" id="booking"></div>
       <div class="contact section" id="contact"></div>
     </main>
+    
     <script src="./src/js/index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ offset: 400, duration: 12000 });
+    </script>
   </body>
 </html>

@@ -6,6 +6,10 @@
   --third: rgb(228, 121, 0);
   color: var(--secondary);
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  a{
+    color: black;
+  }
 }
 
 * {
@@ -19,18 +23,29 @@
 html {
   scroll-behavior: smooth;
 }
+@media screen and (min-width:1200px){
+body{
+  #navigation{
+    .nav-links{
+      display: flex;
+      flex-direction: row;
+    }
+    
+  }
+}
+}
 body {
-  nav {
+  #navigation {
     width: 100vw;
     min-height: 5vh;
     max-height: 10vh;
     padding: 1vh;
     display: flex;
     flex-direction: row;
-    background: #0f2027;
-    color: white;
     position: fixed;
+    transition: 300ms ease-in-out;
     top: 0;
+    
     h1 {
       width: 5vw;
       height: 2vh;
@@ -41,16 +56,14 @@ body {
         color: var(--third);
       }
     }
-    ul {
-      display: flex;
-      flex-direction: row;
+    .nav-links {
+      
       list-style: none;
       position: fixed;
       right: 0;
       li {
         margin: 2vh 2vw;
         a {
-          color: white;
           font-weight: 500;
         }
       }
@@ -66,7 +79,7 @@ body {
       margin: 2vh 1vw;
       padding: 2vh 2vw;
       display: flex;
-      flex-direction: row;
+      flex-direction: row ;
       .explanation {
         width: 30vw;
         min-height: 30vh;
@@ -82,18 +95,20 @@ body {
           border-radius: 50px;
           background: #ffffff;
           box-shadow: 41px 41px 82px #d9d9d9, -41px -41px 82px #ffffff;
+          transition: 600ms ease-in-out;
           h2 {
             font-size: 2rem;
             letter-spacing: 0.15vw;
+            margin: 1vh;
             span {
               color: var(--third);
             }
           }
           p {
             margin: 2vh 2vw;
-            letter-spacing: 0.2vh;
-            text-transform: uppercase;
             font-weight: 500;
+            text-align: justify ;
+
           }
         }
       }
@@ -104,5 +119,59 @@ body {
         
       }
     }
+   
   }
 }
+.anim-nav{
+  z-index: 100;
+  background: #0f2027;
+    color: white;
+    transition: 300ms ease-in-out;
+    a{
+      color: white;
+    }
+}
+.burger{
+  display: none;
+}
+.burger div{
+  width: 25px;
+  height: 3px ;
+  background-color: black ;
+  margin: 5px;
+}
+@media screen and (max-width:1200px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    .nav-links{
+      position: absolute;
+      right: 0px;
+      height: 92vh;
+      top: 8vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: chartreuse;
+width: 50%;
+transform: translateX(100%);
+li{
+  opacity: 0;
+}
+    }
+    .burger{
+      display: block;
+      position: absolute;
+      top: 3vh;
+      right: 5vw;
+      cursor: pointer;
+    }
+  }
+}
+.nav-active{
+  transform: translateX(0);
+  li{
+    opacity: 100;
+  }
+}
+

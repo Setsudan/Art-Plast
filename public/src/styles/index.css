@@ -6,6 +6,11 @@
   --third: rgb(228, 121, 0);
   color: var(--secondary);
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+:root a {
+  color: black;
 }
 
 * {
@@ -23,7 +28,19 @@ html {
   scroll-behavior: smooth;
 }
 
-body nav {
+@media screen and (min-width: 1200px) {
+  body #navigation .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+body #navigation {
   width: 100vw;
   min-height: 5vh;
   max-height: 10vh;
@@ -35,13 +52,13 @@ body nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background: #0f2027;
-  color: white;
   position: fixed;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
   top: 0;
 }
 
-body nav h1 {
+body #navigation h1 {
   width: 5vw;
   height: 2vh;
   margin: 2vh 2vw;
@@ -49,29 +66,21 @@ body nav h1 {
   font-weight: 800;
 }
 
-body nav h1::first-letter {
+body #navigation h1::first-letter {
   color: var(--third);
 }
 
-body nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+body #navigation .nav-links {
   list-style: none;
   position: fixed;
   right: 0;
 }
 
-body nav ul li {
+body #navigation .nav-links li {
   margin: 2vh 2vw;
 }
 
-body nav ul li a {
-  color: white;
+body #navigation .nav-links li a {
   font-weight: 500;
 }
 
@@ -121,11 +130,14 @@ body main .exposition .explanation .cartel, body main .project .explanation .car
   background: #ffffff;
   -webkit-box-shadow: 41px 41px 82px #d9d9d9, -41px -41px 82px #ffffff;
           box-shadow: 41px 41px 82px #d9d9d9, -41px -41px 82px #ffffff;
+  -webkit-transition: 600ms ease-in-out;
+  transition: 600ms ease-in-out;
 }
 
 body main .exposition .explanation .cartel h2, body main .project .explanation .cartel h2 {
   font-size: 2rem;
   letter-spacing: 0.15vw;
+  margin: 1vh;
 }
 
 body main .exposition .explanation .cartel h2 span, body main .project .explanation .cartel h2 span {
@@ -134,14 +146,87 @@ body main .exposition .explanation .cartel h2 span, body main .project .explanat
 
 body main .exposition .explanation .cartel p, body main .project .explanation .cartel p {
   margin: 2vh 2vw;
-  letter-spacing: 0.2vh;
-  text-transform: uppercase;
   font-weight: 500;
+  text-align: justify;
 }
 
 body main .exposition .img, body main .project .img {
   margin-top: 12vh;
   height: 50vh;
   width: 50vw;
+}
+
+.anim-nav {
+  z-index: 100;
+  background: #0f2027;
+  color: white;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.anim-nav a {
+  color: white;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  nav .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: chartreuse;
+    width: 50%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  nav .nav-links li {
+    opacity: 0;
+  }
+  nav .burger {
+    display: block;
+    position: absolute;
+    top: 3vh;
+    right: 5vw;
+    cursor: pointer;
+  }
+}
+
+.nav-active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.nav-active li {
+  opacity: 100;
 }
 /*# sourceMappingURL=index.css.map */
