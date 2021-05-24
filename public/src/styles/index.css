@@ -6,7 +6,7 @@
 
 :root {
   font-size: 16px;
-  color: var(--secondary);
+  color: #0a0009;
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
 }
@@ -195,6 +195,14 @@ body main .exposition .img, body main .project .img {
 
 * a {
   text-decoration: none;
+  -webkit-transition: 900ms ease-in-out;
+  transition: 900ms ease-in-out;
+}
+
+* a:hover {
+  color: #e47900;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 html {
