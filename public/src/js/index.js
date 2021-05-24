@@ -1,20 +1,17 @@
-const navigation = document.getElementById("navigation");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 30) {
-    navigation.classList.add("anim-nav");
-  } else {
-    navigation.classList.remove("anim-nav");
-  }
-});
+const navAnimation = () =>{
+  const navigation = document.getElementById("navigation");
 
-const navSlide = () => {
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('.nav-links');
-
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('nav-active')
-  })
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 30) {
+      navigation.classList.add("anim-nav");
+    } else {
+      navigation.classList.remove("anim-nav");
+    }
+  });
 }
 
-navSlide();
+const app =()=>{
+  navAnimation();
+}
+app();

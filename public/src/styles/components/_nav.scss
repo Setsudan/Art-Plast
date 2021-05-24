@@ -1,0 +1,50 @@
+#navigation {
+  width: 100vw;
+  min-height: 5vh;
+  max-height: 10vh;
+  padding: 1vh;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  transition: 300ms ease-in-out;
+  top: 0;
+
+  h1 {
+    width: 5vw;
+    height: 2vh;
+    margin: 2vh 2vw;
+    letter-spacing: 8px;
+    font-weight: 800;
+    &::first-letter {
+      color: $third;
+    }
+  }
+  
+  /* Liste des liens */
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    position: fixed;
+    right: 0;
+    li {
+      margin: 2vh 2vw;
+      a {
+        font-weight: 500;
+      }
+    }
+  }
+}
+/* Animation de la barre de navigation après 30px de scroll */
+.anim-nav {
+  z-index: 100;
+  background: #0f2027;
+  color: white;
+  transition: 300ms ease-in-out;
+  .hamburger{
+      color: white;
+  }
+  a {
+    color: white;
+  }
+}

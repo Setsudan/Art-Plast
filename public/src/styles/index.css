@@ -1,9 +1,11 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
+.third-design {
+  color: #e47900;
+}
+
 :root {
   font-size: 16px;
-  --primary: rgb(221, 221, 221);
-  --secondary: rgb(10, 0, 9);
-  --third: rgb(228, 121, 0);
   color: var(--secondary);
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
@@ -13,38 +15,20 @@
   color: black;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+body {
+  /* Margin pour pas être en dessous de la barre de navigation */
 }
 
-* a {
-  text-decoration: none;
+body main {
+  margin-top: 10vh;
+  /* Taille de chaque section */
 }
 
-html {
-  scroll-behavior: smooth;
+body main .section {
+  min-height: 100vh;
 }
 
-@media screen and (min-width: 1200px) {
-  body #navigation .nav-links {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-body #navigation {
-  width: 100vw;
-  min-height: 5vh;
-  max-height: 10vh;
-  padding: 1vh;
+body main .Landing {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,44 +36,25 @@ body #navigation {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  position: fixed;
-  -webkit-transition: 300ms ease-in-out;
-  transition: 300ms ease-in-out;
-  top: 0;
+  padding: 5vh 10vw;
 }
 
-body #navigation h1 {
-  width: 5vw;
-  height: 2vh;
-  margin: 2vh 2vw;
-  letter-spacing: 8px;
-  font-weight: 800;
+body main .Landing .title {
+  height: 55vh;
+  width: 45vw;
+  padding: 2vh 4vw;
 }
 
-body #navigation h1::first-letter {
-  color: var(--third);
+body main .Landing .title h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin: 0;
 }
 
-body #navigation .nav-links {
-  list-style: none;
-  position: fixed;
-  right: 0;
-}
-
-body #navigation .nav-links li {
-  margin: 2vh 2vw;
-}
-
-body #navigation .nav-links li a {
-  font-weight: 500;
-}
-
-body main {
-  margin-top: 10vh;
-}
-
-body main .section {
-  min-height: 100vh;
+body main .Landing img {
+  height: 45vh;
+  width: 45vw;
 }
 
 body main .exposition, body main .project {
@@ -140,10 +105,6 @@ body main .exposition .explanation .cartel h2, body main .project .explanation .
   margin: 1vh;
 }
 
-body main .exposition .explanation .cartel h2 span, body main .project .explanation .cartel h2 span {
-  color: var(--third);
-}
-
 body main .exposition .explanation .cartel p, body main .project .explanation .cartel p {
   margin: 2vh 2vw;
   font-weight: 500;
@@ -156,6 +117,59 @@ body main .exposition .img, body main .project .img {
   width: 50vw;
 }
 
+#navigation {
+  width: 100vw;
+  min-height: 5vh;
+  max-height: 10vh;
+  padding: 1vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: fixed;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  top: 0;
+  /* Liste des liens */
+}
+
+#navigation h1 {
+  width: 5vw;
+  height: 2vh;
+  margin: 2vh 2vw;
+  letter-spacing: 8px;
+  font-weight: 800;
+}
+
+#navigation h1::first-letter {
+  color: #e47900;
+}
+
+#navigation .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  position: fixed;
+  right: 0;
+}
+
+#navigation .nav-links li {
+  margin: 2vh 2vw;
+}
+
+#navigation .nav-links li a {
+  font-weight: 500;
+}
+
+/* Animation de la barre de navigation après 30px de scroll */
 .anim-nav {
   z-index: 100;
   background: #0f2027;
@@ -164,69 +178,27 @@ body main .exposition .img, body main .project .img {
   transition: 300ms ease-in-out;
 }
 
+.anim-nav .hamburger {
+  color: white;
+}
+
 .anim-nav a {
   color: white;
 }
 
-.burger {
-  display: none;
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color: black;
-  margin: 5px;
+* a {
+  text-decoration: none;
 }
 
-@media screen and (max-width: 1200px) {
-  nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  nav .nav-links {
-    position: absolute;
-    right: 0px;
-    height: 92vh;
-    top: 8vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background: chartreuse;
-    width: 50%;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-  nav .nav-links li {
-    opacity: 0;
-  }
-  nav .burger {
-    display: block;
-    position: absolute;
-    top: 3vh;
-    right: 5vw;
-    cursor: pointer;
-  }
-}
-
-.nav-active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.nav-active li {
-  opacity: 100;
+html {
+  scroll-behavior: smooth;
+  scroll-margin: 1vh;
 }
 /*# sourceMappingURL=index.css.map */
