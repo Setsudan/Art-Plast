@@ -118,7 +118,7 @@ body main .exposition .img, body main .project .img {
 }
 
 #navigation {
-  width: 100vw;
+  width: 100%;
   min-height: 5vh;
   max-height: 10vh;
   padding: 1vh;
