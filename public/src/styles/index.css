@@ -52,7 +52,8 @@ body main .Landing .title h1 {
   margin: 0;
 }
 
-body main .exposition, body main .project {
+body main .exposition,
+body main .project {
   width: 90vw;
   margin: 2vh 1vw;
   padding: 2vh 2vw;
@@ -65,7 +66,8 @@ body main .exposition, body main .project {
           flex-direction: row;
 }
 
-body main .exposition .explanation, body main .project .explanation {
+body main .exposition .explanation,
+body main .project .explanation {
   width: 30vw;
   min-height: 30vh;
   max-height: 40vh;
@@ -83,7 +85,8 @@ body main .exposition .explanation, body main .project .explanation {
           flex: 1;
 }
 
-body main .exposition .explanation .cartel, body main .project .explanation .cartel {
+body main .exposition .explanation .cartel,
+body main .project .explanation .cartel {
   margin: 1vh 1vw;
   padding: 1vh 1vw;
   border-radius: 50px;
@@ -94,22 +97,69 @@ body main .exposition .explanation .cartel, body main .project .explanation .car
   transition: 600ms ease-in-out;
 }
 
-body main .exposition .explanation .cartel h2, body main .project .explanation .cartel h2 {
+body main .exposition .explanation .cartel h2,
+body main .project .explanation .cartel h2 {
   font-size: 2rem;
   letter-spacing: 0.15vw;
   margin: 1vh;
 }
 
-body main .exposition .explanation .cartel p, body main .project .explanation .cartel p {
+body main .exposition .explanation .cartel p,
+body main .project .explanation .cartel p {
   margin: 2vh 2vw;
   font-weight: 500;
   text-align: justify;
 }
 
-body main .exposition .img, body main .project .img {
+body main .exposition .img,
+body main .project .img {
   margin-top: 12vh;
   height: 50vh;
   width: 50vw;
+}
+
+body main .réservation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 2vh 10vw;
+  padding: 5vh 2vw;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body main .réservation .place {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body main .réservation .booking {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  text-align: justify;
+  display: block;
+  padding: 5vh 5vw;
+  border-radius: 50px;
+  line-height: 3vh;
+}
+
+body main .réservation .booking h3 {
+  margin: 0.5vh 0;
+}
+
+body main .réservation .place,
+body main .réservation .booking {
+  height: 50vh;
+  border-radius: 0px;
+  background: #ffffff;
+  -webkit-box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+          box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
 }
 
 #navigation {
