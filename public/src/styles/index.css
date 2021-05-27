@@ -162,6 +162,61 @@ body main .réservation .booking {
           box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
 }
 
+body main .contact {
+  border-radius: 0px;
+  background: #ffffff;
+  -webkit-box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+          box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5vh 10vw;
+}
+
+body main .contact .sub-title {
+  height: 25vh;
+  width: 55vw;
+  padding: 2vh 4vw;
+}
+
+body main .contact .sub-title h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin: 0;
+}
+
+body main .contact article {
+  margin: 1vh 25vw;
+  padding: 2vh 2vw;
+  border-radius: 0px;
+  background: #ffffff;
+  -webkit-box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+          box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25vw;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+body main .contact article h2 {
+  margin: 0.5vh 0;
+}
+
+body main .contact article a {
+  width: 10vw;
+}
+
 #navigation {
   width: 100%;
   min-height: 5vh;

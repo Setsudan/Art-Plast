@@ -92,5 +92,41 @@ body {
         box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
       }
     }
+    .contact{
+      border-radius: 0px;
+        background: #ffffff;
+        box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+        display: flex;
+        flex-direction: column;
+        padding: 5vh 10vw;
+        .sub-title {
+          height: 25vh;
+          width: 55vw;
+          padding: 2vh 4vw;
+          h1 {
+            font-size: 5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5rem;
+            margin: 0;
+          }
+        }
+        article{
+          margin: 1vh 25vw;
+          padding: 2vh 2vw;
+          border-radius: 0px;
+        background: #ffffff;
+        box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+        display: flex;
+        flex-direction: column;
+        width: 25vw;
+        align-content: space-around;
+        h2{
+          margin: 0.5vh 0;
+        }
+        a{
+          width: 10vw;
+        }
+        }
+    }
   }
 }
