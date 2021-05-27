@@ -52,11 +52,6 @@ body main .Landing .title h1 {
   margin: 0;
 }
 
-body main .Landing img {
-  height: 45vh;
-  width: 45vw;
-}
-
 body main .exposition, body main .project {
   width: 90vw;
   margin: 2vh 1vw;
@@ -208,5 +203,10 @@ body main .exposition .img, body main .project .img {
 html {
   scroll-behavior: smooth;
   scroll-margin: 1vh;
+}
+
+.horizontal-img {
+  height: 45vh;
+  width: 45vw;
 }
 /*# sourceMappingURL=index.css.map */
